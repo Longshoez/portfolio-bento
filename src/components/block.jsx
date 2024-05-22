@@ -1,23 +1,21 @@
 import { Paper, Box } from "@mui/material"
 
-interface propTypes {
-  h: number;
-  w: number;
-  type: string;
-  children: any;
-}
+// interface propTypes {
+//   h: number;
+//   w: number;
+//   type: string;
+//   children: any;
+// }
 
 export const Block = ({
   h = 100,
   w = 100,
   type = 'deafult',
   children,
-}: propTypes) => {
+}) => {
 
-  const blockType = (type: any) => {
+  const blockType = (type) => {
     switch (type) {
-      case 'default':
-        return '#DEDEDE'
       case 'orange':
         return '#F5761A';
       case 'button':
@@ -40,16 +38,3 @@ export const Block = ({
     </div >
   )
 }
-
-{/*   sx={{ */ }
-{/*     display: 'flex', */ }
-{/*     flexWrap: 'wrap', */ }
-{/*     '& > :not(style)': { */ }
-{/*       width: w, */ }
-{/*       height: h, */ }
-{/*     }, */ }
-{/*   }} */ }
-{/* > */ }
-{/*   <Paper /> */ }
-{/* </Box> */ }
-
