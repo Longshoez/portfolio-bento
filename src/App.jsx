@@ -16,10 +16,12 @@ function App() {
         width: '50rem',
         height: '35rem',
       }}>
+      {/* Row 1  */}
       <Stack
         direction={'row'}
         spacing={spacing}
-        sx={{ height: '75%' }}>
+        sx={{ height: '73%' }}>
+        {/* Column 1  */}
         <Block h={100} w={33} type='image'>
           <img
             src='../public/me.jpeg'
@@ -32,6 +34,7 @@ function App() {
             }}
           />
         </Block>
+        {/* Column 2  */}
         <Stack
           direction={'column'}
           spacing={spacing}
@@ -46,7 +49,7 @@ function App() {
               body='@g43ri3I'
             />
           </Block>
-          <Block h={28} w={100}>
+          <Block h={30} w={100}>
             <BlockComboText
               body='Hi! my name is Gabriel Im a Software Developer from Colima, México.'
             />
@@ -82,6 +85,7 @@ function App() {
             <IconPicker icon={'rightUp'} color='white' />
           </Block>
         </Stack>
+        {/* Column 3  */}
         <Stack
           direction={'column'}
           spacing={spacing}
@@ -89,7 +93,7 @@ function App() {
             width: '33%',
             height: '100%'
           }}>
-          <Block h={33} w={100}>
+          <Block h={38} w={100}>
             <BlockComboText
               body='These are some of my hobbies, I also enjoy learning stuff on my free time tech-related or not'
             />
@@ -136,9 +140,10 @@ function App() {
           </Stack>
         </Stack>
       </Stack >
+      {/* Row 2  */}
       <Stack
         direction={'row'}
-        height={'22%'}
+        height={'25%'}
         paddingTop={spacing}
         paddingBottom={spacing}
         spacing={spacing}
