@@ -6,25 +6,27 @@ import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined
 import CallMadeOutlinedIcon from '@mui/icons-material/CallMadeOutlined';
 import DesignServicesOutlinedIcon from '@mui/icons-material/DesignServicesOutlined';
 
-export const IconPicker = ({ icon }) => {
+export const IconPicker = ({ icon, color = '#000' }) => {
+
+  const size = 'large'
 
   switch (icon) {
     case 'game':
-      return <VideogameAssetOutlinedIcon></VideogameAssetOutlinedIcon>
+      return <VideogameAssetOutlinedIcon fontSize={size} sx={{ color: color }} ></VideogameAssetOutlinedIcon>
     case 'piano':
-      return <PianoOutlinedIcon></PianoOutlinedIcon>
+      return <PianoOutlinedIcon fontSize={size} sx={{ color: color }} ></PianoOutlinedIcon>
     case 'art':
-      return <PaletteOutlinedIcon></PaletteOutlinedIcon>
+      return <PaletteOutlinedIcon fontSize={size} sx={{ color: color }} ></PaletteOutlinedIcon>
     case 'camera':
-      return <PhotoCameraOutlinedIcon></PhotoCameraOutlinedIcon>
+      return <PhotoCameraOutlinedIcon fontSize={size} sx={{ color: color }} ></PhotoCameraOutlinedIcon>
     case 'right':
-      return <ArrowRightAltOutlinedIcon></ArrowRightAltOutlinedIcon>
+      return <ArrowRightAltOutlinedIcon fontSize={size} sx={{ color: color }} ></ArrowRightAltOutlinedIcon>
     case 'rightUp':
-      return <CallMadeOutlinedIcon ></CallMadeOutlinedIcon>
+      return <CallMadeOutlinedIcon fontSize={size} sx={{ color: color }} ></CallMadeOutlinedIcon>
     case 'design':
-      return <DesignServicesOutlinedIcon></DesignServicesOutlinedIcon>
+      return <DesignServicesOutlinedIcon fontSize={size} sx={{ color: color }} ></DesignServicesOutlinedIcon>
     default:
-      return <VideogameAssetOutlinedIcon></VideogameAssetOutlinedIcon>
+      return <VideogameAssetOutlinedIcon fontSize={size} sx={{ color: color }} ></VideogameAssetOutlinedIcon>
 
   }
 }

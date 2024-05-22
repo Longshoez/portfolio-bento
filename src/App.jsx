@@ -1,7 +1,8 @@
-import { Stack } from '@mui/material'
+import { Stack, Typography } from '@mui/material'
 import './App.css'
 import { Block } from './components/block'
 import { BlockComboText } from './components/blockComboText'
+import { IconPicker } from './components/iconPicker'
 
 //NOTE: Make the SEO perfect for this project
 
@@ -19,8 +20,17 @@ function App() {
         direction={'row'}
         spacing={spacing}
         sx={{ height: '75%' }}>
-        <Block h={100} w={33}>
-
+        <Block h={100} w={33} type='image'>
+          <img
+            src='../public/me.jpeg'
+            width='auto'
+            height='100%'
+            style={{
+              objectFit: 'cover',
+              transform: 'translate(-10px, 5px)',
+              scale: '1.1'
+            }}
+          />
         </Block>
         <Stack
           direction={'column'}
@@ -59,7 +69,18 @@ function App() {
               />
             </Block>
           </Stack>
-          <Block h={10} w={100} type={'button'}></Block>
+          <Block h={10} w={100} type={'button'}>
+            <Typography
+              sx={{ height: '100%' }}
+              variant={'p'}
+              lineHeight='17px'
+              fontWeight={'bold'}
+              align={'center'}
+              color={'white'}>
+              Contact Info
+            </Typography>
+            <IconPicker icon={'rightUp'} color='white' />
+          </Block>
         </Stack>
         <Stack
           direction={'column'}
@@ -81,7 +102,7 @@ function App() {
             <Block w={50} type='orange'>
               <BlockComboText
                 type='icon'
-                icon='games'
+                icon='game'
                 body='Video-games'
               />
             </Block>
@@ -122,9 +143,27 @@ function App() {
         paddingBottom={spacing}
         spacing={spacing}
       >
-        <Block w={21} type='orange'></Block>
-        <Block w={21} type='orange'></Block>
-        <Block w={21} type='orange'></Block>
+        <Block w={21} type='orange'>
+          <BlockComboText
+            type='iconRow'
+            icon='camera'
+            body='Next.js'
+          />
+        </Block>
+        <Block w={21} type='orange'>
+          <BlockComboText
+            type='iconRow'
+            icon='camera'
+            body='Python/Flask'
+          />
+        </Block>
+        <Block w={21} type='orange'>
+          <BlockComboText
+            type='iconRow'
+            icon='camera'
+            body='React Native'
+          />
+        </Block>
         <Stack
           direction={'row'}
           width={'33%'}
@@ -137,7 +176,15 @@ function App() {
               body='Photography'
             />
           </Block>
-          <Block w={50} type={'button'}></Block>
+          <Block w={50} type={'button'}>
+            <BlockComboText
+              type='icon'
+              icon='right'
+              iconColor='white'
+              color='white'
+              body='More about me'
+            />
+          </Block>
         </Stack>
       </Stack>
     </Stack >

@@ -29,6 +29,7 @@ export const Block = ({
     <div style={{
       width: `${w}%`,
       height: `${h}%`,
+      overflow: type === 'image' ? 'hidden' : 'initial',
       border: type === 'button' ? '1px solid white' : 'none',
       cursor: 'pointer',
       borderRadius: '20px',

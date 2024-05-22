@@ -11,16 +11,19 @@ export const BlockComboText = ({
   body,
   type = 'default',
   icon,
+  iconColor = 'black',
+  color = 'black'
 }) => {
   return (
     <Stack
-      direction='column'
+      direction={type === 'iconRow' ? 'row' : 'column'}
+      spacing={type === 'iconRow' ? 1 : 0}
       padding='1rem'
       alignItems='left'
     >
       {
-        type === 'icon' ? (
-          <IconPicker icon={icon} />
+        type === 'icon' || type === 'iconRow' ? (
+          <IconPicker icon={icon} color={iconColor} />
         ) :
           (
             heading && <Typography
@@ -40,7 +43,7 @@ export const BlockComboText = ({
           lineHeight='17px'
           fontWeight={type === 'title' ? 'bold' : 'regular'}
           align={type === 'title' ? 'center' : 'left'}
-          color='black'>
+          color={color}>
           {body}
         </Typography>
       }
