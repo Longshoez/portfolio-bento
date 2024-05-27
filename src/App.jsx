@@ -23,7 +23,7 @@ function App() {
           <Grid item xs={6}>
             <Block h={100} type='image' delay={1}>
               <img
-                src='../public/static/me.jpeg'
+                src='./assets/me.jpeg'
                 width='100%'
                 height='100%'
                 style={{
