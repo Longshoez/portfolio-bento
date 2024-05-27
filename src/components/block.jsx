@@ -1,4 +1,5 @@
-import { Paper, Box } from "@mui/material"
+import { Button } from '@mui/material'
+
 
 // interface propTypes {
 //   h: number;
@@ -11,7 +12,11 @@ export const Block = ({
   h = 100,
   w = 100,
   type = 'deafult',
+  borderOverride = 25,
   children,
+  align = 'center',
+  onClick = () => { },
+  // glare = false,
 }) => {
 
   const blockType = (type) => {
@@ -25,17 +30,24 @@ export const Block = ({
     }
   }
 
+  const styling = {
+    position: 'relative',
+    width: `${w}%`,
+    height: `${h}%`,
+    overflow: type === 'image' ? 'hidden' : 'initial',
+    border: type === 'button' ? '1px solid white' : 'none',
+    cursor: (type === 'button' || type == 'clickable') ? 'pointer' : 'default',
+    borderRadius: `${borderOverride}px`,
+    backgroundColor: `${blockType(type)}`,
+    alignContent: `${align}`,
+  }
+
   return (
-    <div style={{
-      width: `${w}%`,
-      height: `${h}%`,
-      overflow: type === 'image' ? 'hidden' : 'initial',
-      border: type === 'button' ? '1px solid white' : 'none',
-      cursor: 'pointer',
-      borderRadius: '20px',
-      backgroundColor: `${blockType(type)}`
-    }}>
-      {children}
-    </div >
+    type == 'button' ?
+      <Button sx={styling} onClick={onClick}>{children}</Button>
+      :
+      <div style={styling}>
+        {children}
+      </div >
   )
 }

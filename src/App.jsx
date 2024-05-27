@@ -1,4 +1,4 @@
-import { Stack, Typography, Grid } from '@mui/material'
+import { Typography, Grid, Box } from '@mui/material'
 import './App.css'
 import { Block } from './components/block'
 import { BlockComboText } from './components/blockComboText'
@@ -22,79 +22,164 @@ function App() {
           <Grid item xs={6}>
             <Block h={100} type='image'>
               <img
-                src='../public/me.jpeg'
+                src='../public/static/me.jpeg'
                 width='100%'
                 height='100%'
                 style={{
                   objectFit: 'cover',
                   transform: 'translate(-10px, 5px)',
-                  scale: '1.1'
+                  scale: '1.1',
                 }}
               />
             </Block>
           </Grid>
 
           <Grid item container xs={6} direction={'column'} spacing={spacing}>
-            <Grid item xs={2.5}>
-              <Block>2</Block>
+            <Grid item xs={2.75}>
+              <Block center='full' type='clickable'>
+                <Typography
+                  variant='h4'
+                  color='black'
+                  fontWeight={'bold'}
+                  fontStyle={'italic'}>
+                  @gabriel
+                </Typography>
+              </Block>
             </Grid>
 
             <Grid item xs={3.5}>
-              <Block>2</Block>
+              <Block>
+                <BlockComboText
+                  body='Hi! my name is Gabriel Im a Software Developer from Colima, México.'
+                />
+              </Block>
             </Grid>
 
 
             <Grid item container xs={4} spacing={spacing}>
               <Grid item xs={6}>
-                <Block>2</Block>
+                <Block align='center'>
+                  <BlockComboText
+                    heading='3+'
+                    body='Years of experience'
+                  />
+                </Block>
               </Grid>
               <Grid item xs={6}>
-                <Block>3</Block>
+                <Block>
+                  <BlockComboText
+                    heading='3'
+                    body='Live projects'
+                  />
+                </Block>
               </Grid>
             </Grid>
-            <Grid item xs={2}>
-              <Block type='button'>contact</Block>
+            <Grid item xs={1.75}>
+              <Block
+                type='button'
+                borderOverride={50}
+                align='center'
+                icon='arrow'
+                onClick={() => alert('open email')}
+              >
+                Contact info
+              </Block>
             </Grid>
           </Grid>
 
         </Grid>
         <Grid item container xs={3} direction='row' spacing={spacing}>
           <Grid item xs={4}>
-            <Block type={'orange'}>1</Block>
+            <Block type={'orange'}>
+              <BlockComboText
+                type='iconRow'
+                icon='camera'
+                iconSize={70}
+                body='React Native'
+              />
+            </Block>
           </Grid>
           <Grid item xs={4}>
-            <Block type={'orange'}>1</Block>
+            <Block type={'orange'}>
+              <BlockComboText
+                type='iconRow'
+                icon='camera'
+                iconSize={70}
+                body='Next.js'
+              />
+            </Block>
           </Grid>
           <Grid item xs={4}>
-            <Block type={'orange'}>1</Block>
+            <Block type={'orange'}>
+              <BlockComboText
+                type='iconRow'
+                icon='camera'
+                iconSize={70}
+                body='Python/ Flask'
+              />
+            </Block>
           </Grid>
         </Grid>
       </Grid>
       <Grid item container xs={4} direction={'column'} spacing={spacing}>
         <Grid item xs={3}>
-          <Block>2</Block>
+          <Block>
+            <BlockComboText
+              body='These are some of my hobbies, I also enjoy learning stuff on my free time tech-related or not'
+            />
+          </Block>
         </Grid>
         <Grid item container xs={3} spacing={spacing}>
           <Grid item xs={6}>
-            <Block type={'orange'}>2</Block>
+            <Block type={'orange'}>
+              <BlockComboText
+                type='icon'
+                icon='game'
+                body='Video-games'
+              />
+            </Block>
           </Grid>
           <Grid item xs={6}>
-            <Block type={'orange'}>2</Block>
+            <Block type={'orange'}>
+              <BlockComboText
+                type='icon'
+                icon='piano'
+                body='Music production'
+              />
+            </Block>
           </Grid>
         </Grid>
 
         <Grid item container xs={3} spacing={spacing}>
           <Grid item xs={6}>
-            <Block type={'orange'}>2</Block>
+            <Block type={'orange'}>
+              <BlockComboText
+                type='icon'
+                icon='art'
+                body='UI Design'
+              />
+            </Block>
           </Grid>
           <Grid item xs={6}>
-            <Block type={'orange'}>2</Block>
+            <Block type={'orange'}>
+              <BlockComboText
+                type='icon'
+                icon='design'
+                body='Product Design'
+              />
+            </Block>
           </Grid>
         </Grid>
 
         <Grid item container xs={3} spacing={spacing}>
           <Grid item xs={6}>
-            <Block type={'orange'}>2</Block>
+            <Block type={'orange'}>
+              <BlockComboText
+                type='icon'
+                icon='camera'
+                body='Photo-graphy'
+              />
+            </Block>
           </Grid>
           <Grid item xs={6}>
             <Block type={'button'}>More about me</Block>

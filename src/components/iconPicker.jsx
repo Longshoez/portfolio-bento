@@ -6,27 +6,25 @@ import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined
 import CallMadeOutlinedIcon from '@mui/icons-material/CallMadeOutlined';
 import DesignServicesOutlinedIcon from '@mui/icons-material/DesignServicesOutlined';
 
-export const IconPicker = ({ icon, color = '#000' }) => {
-
-  const size = 'large'
+export const IconPicker = ({ icon, color = '#000', size: size = '40px' }) => {
 
   switch (icon) {
     case 'game':
-      return <VideogameAssetOutlinedIcon fontSize={size} sx={{ color: color }} ></VideogameAssetOutlinedIcon>
+      return <VideogameAssetOutlinedIcon sx={{ color: color, width: `${size}px`, height: `${size}px` }} ></VideogameAssetOutlinedIcon>
     case 'piano':
-      return <PianoOutlinedIcon fontSize={size} sx={{ color: color }} ></PianoOutlinedIcon>
+      return <PianoOutlinedIcon sx={{ color: color, width: `${size}px`, height: `${size}px` }} ></PianoOutlinedIcon>
     case 'art':
-      return <PaletteOutlinedIcon fontSize={size} sx={{ color: color }} ></PaletteOutlinedIcon>
+      return <PaletteOutlinedIcon sx={{ color: color, width: `${size}px`, height: `${size}px` }}></PaletteOutlinedIcon>
     case 'camera':
-      return <PhotoCameraOutlinedIcon fontSize={size} sx={{ color: color }} ></PhotoCameraOutlinedIcon>
+      return <PhotoCameraOutlinedIcon sx={{ color: color, width: `${size}px`, height: `${size}px` }}></PhotoCameraOutlinedIcon>
     case 'right':
-      return <ArrowRightAltOutlinedIcon fontSize={size} sx={{ color: color }} ></ArrowRightAltOutlinedIcon>
+      return <ArrowRightAltOutlinedIcon sx={{ color: color, width: `${size}px`, height: `${size}px` }}></ArrowRightAltOutlinedIcon>
     case 'rightUp':
-      return <CallMadeOutlinedIcon fontSize={size} sx={{ color: color }} ></CallMadeOutlinedIcon>
+      return <CallMadeOutlinedIcon sx={{ color: color, width: `${size}px`, height: `${size}px` }}></CallMadeOutlinedIcon>
     case 'design':
-      return <DesignServicesOutlinedIcon fontSize={size} sx={{ color: color }} ></DesignServicesOutlinedIcon>
+      return <DesignServicesOutlinedIcon sx={{ color: color, width: `${size}px`, height: `${size}px` }}></DesignServicesOutlinedIcon>
     default:
-      return <VideogameAssetOutlinedIcon fontSize={size} sx={{ color: color }} ></VideogameAssetOutlinedIcon>
+      return <VideogameAssetOutlinedIcon sx={{ color: color, width: `${size}px`, height: `${size}px` }}></VideogameAssetOutlinedIcon>
 
   }
 }
