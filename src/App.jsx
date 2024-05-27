@@ -21,7 +21,7 @@ function App() {
       <Grid item container xs={8} spacing={spacing} direction='column'>
         <Grid item container xs={9} direction='row' spacing={spacing}>
           <Grid item xs={6}>
-            <Block h={100} type='image'>
+            <Block h={100} type='image' delay={1}>
               <img
                 src='../public/static/me.jpeg'
                 width='100%'
@@ -37,7 +37,7 @@ function App() {
 
           <Grid item container xs={6} direction={'column'} spacing={spacing}>
             <Grid item xs={2.75}>
-              <Block center='full' type='clickable'>
+              <Block center='full' type='clickable' delay={2}>
                 <Typography
                   variant='h4'
                   color='black'
@@ -49,7 +49,7 @@ function App() {
             </Grid>
 
             <Grid item xs={3.5}>
-              <Block>
+              <Block delay={3}>
                 <BlockComboText
                   body='Hi! my name is Gabriel Im a Software Developer from Colima, México.'
                 />
@@ -58,7 +58,7 @@ function App() {
 
             <Grid item container xs={4} spacing={spacing}>
               <Grid item xs={6}>
-                <Block align='center'>
+                <Block align='center' delay={4}>
                   <BlockComboText
                     heading='3+'
                     body='Years of experience'
@@ -66,7 +66,7 @@ function App() {
                 </Block>
               </Grid>
               <Grid item xs={6}>
-                <Block>
+                <Block delay={5}>
                   <BlockComboText
                     heading='3'
                     body='Live projects'
@@ -76,6 +76,7 @@ function App() {
             </Grid>
             <Grid item xs={1.75}>
               <Block
+                delay={5}
                 type='button'
                 borderOverride={50}
                 align='center'
@@ -92,7 +93,7 @@ function App() {
         </Grid>
         <Grid item container xs={3} direction='row' spacing={spacing}>
           <Grid item xs={4}>
-            <Block type={'orange'}>
+            <Block type={'orange'} delay={3}>
               <BlockComboText
                 type='iconRow'
                 icon='react'
@@ -102,7 +103,7 @@ function App() {
             </Block>
           </Grid>
           <Grid item xs={4}>
-            <Block type={'orange'}>
+            <Block type={'orange'} delay={4}>
               <BlockComboText
                 type='iconRow'
                 icon='next'
@@ -112,7 +113,7 @@ function App() {
             </Block>
           </Grid>
           <Grid item xs={4}>
-            <Block type={'orange'}>
+            <Block type={'orange'} delay={5}>
               <BlockComboText
                 type='iconRow'
                 icon='python'
@@ -125,7 +126,7 @@ function App() {
       </Grid>
       <Grid item container xs={4} direction={'column'} spacing={spacing}>
         <Grid item xs={3}>
-          <Block>
+          <Block delay={7}>
             <BlockComboText
               body='These are some of my hobbies, I also enjoy learning stuff on my free time tech-related or not'
             />
@@ -133,7 +134,7 @@ function App() {
         </Grid>
         <Grid item container xs={3} spacing={spacing}>
           <Grid item xs={6}>
-            <Block type={'orange'}>
+            <Block type={'orange'} delay={7}>
               <BlockComboText
                 type='icon'
                 icon='game'
@@ -142,7 +143,7 @@ function App() {
             </Block>
           </Grid>
           <Grid item xs={6}>
-            <Block type={'orange'}>
+            <Block type={'orange'} delay={8}>
               <BlockComboText
                 type='icon'
                 icon='piano'
@@ -154,7 +155,7 @@ function App() {
 
         <Grid item container xs={3} spacing={spacing}>
           <Grid item xs={6}>
-            <Block type={'orange'}>
+            <Block type={'orange'} delay={9}>
               <BlockComboText
                 type='icon'
                 icon='art'
@@ -163,7 +164,7 @@ function App() {
             </Block>
           </Grid>
           <Grid item xs={6}>
-            <Block type={'orange'}>
+            <Block type={'orange'} delay={10}>
               <BlockComboText
                 type='icon'
                 icon='design'
@@ -175,7 +176,7 @@ function App() {
 
         <Grid item container xs={3} spacing={spacing}>
           <Grid item xs={6}>
-            <Block type={'orange'}>
+            <Block type={'orange'} delay={6}>
               <BlockComboText
                 type='icon'
                 icon='camera'
@@ -184,7 +185,7 @@ function App() {
             </Block>
           </Grid>
           <Grid item xs={6}>
-            <Block type={'orange'} disabled={true}>
+            <Block type={'orange'} disabled={true} delay={7}>
               <BlockComboText
                 type='icon'
                 icon='right'

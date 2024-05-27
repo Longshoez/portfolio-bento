@@ -20,6 +20,7 @@ export const Block = ({
   iconColor,
   iconSize,
   disabled,
+  delay = 0,
   onClick = () => { },
   // glare = false,
 }) => {
@@ -67,7 +68,7 @@ export const Block = ({
 
   return (
     type == 'button' ?
-      <Grow in={true}>
+      <Grow in={true} style={{ transitionDelay: `${delay * 100}ms` }}>
         <Button
           sx={{ ...styling, ...buttonStyles, ...animationBlock }}
           onClick={onClick}
@@ -76,10 +77,10 @@ export const Block = ({
           {children}
         </Button >
 
-      </Grow>
+      </Grow >
       :
-      <Grow in={true}>
-        <Box sx={{ ...styling, ...buttonStyles, ...animationBlock }}>
+      <Grow in={true} style={{ transitionDelay: `${delay * 100}ms` }}>
+        <Box sx={{ ...styling, ...animationBlock }}>
           {children}
         </Box >
       </Grow>
