@@ -13,7 +13,8 @@ export const BlockComboText = ({
   icon,
   iconColor = 'black',
   iconSize = 40,
-  color = 'black'
+  color = 'black',
+  variant = 'iconButton'
 }) => {
 
   const comboAlignment = (type) => {

@@ -1,5 +1,6 @@
-import { Button } from '@mui/material'
-
+import { Button, Box } from '@mui/material'
+import { IconPicker } from './iconPicker'
+import Grow from '@mui/material/Grow'
 
 // interface propTypes {
 //   h: number;
@@ -15,6 +16,10 @@ export const Block = ({
   borderOverride = 25,
   children,
   align = 'center',
+  icon,
+  iconColor,
+  iconSize,
+  disabled,
   onClick = () => { },
   // glare = false,
 }) => {
@@ -40,14 +45,43 @@ export const Block = ({
     borderRadius: `${borderOverride}px`,
     backgroundColor: `${blockType(type)}`,
     alignContent: `${align}`,
+    opacity: disabled ? 0.15 : 1,
+  }
+
+  const buttonStyles = {
+    color: 'white',
+    fontSize: '15px',
+    lineHeight: '23px',
+    opacity: disabled ? 0.15 : 1,
+    '&:hover': {
+      border: '1px solid Gray'
+    }
+    // fontWeight: { type === 'title' ? 'bold' : 'regular',
+  }
+
+  const animationBlock = {
+    zIndex: '1000',
+    transition: '1s ease-in-out',
+    '&: hover': { transform: 'scale(1.05)' }
   }
 
   return (
     type == 'button' ?
-      <Button sx={styling} onClick={onClick}>{children}</Button>
+      <Grow in={true}>
+        <Button
+          sx={{ ...styling, ...buttonStyles, ...animationBlock }}
+          onClick={onClick}
+          endIcon={icon ? <IconPicker icon={icon} color={iconColor} size={iconSize} /> : <></>}
+        >
+          {children}
+        </Button >
+
+      </Grow>
       :
-      <div style={styling}>
-        {children}
-      </div >
+      <Grow in={true}>
+        <Box sx={{ ...styling, ...buttonStyles, ...animationBlock }}>
+          {children}
+        </Box >
+      </Grow>
   )
 }

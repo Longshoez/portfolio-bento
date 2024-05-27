@@ -23,6 +23,13 @@ export const IconPicker = ({ icon, color = '#000', size: size = '40px' }) => {
       return <CallMadeOutlinedIcon sx={{ color: color, width: `${size}px`, height: `${size}px` }}></CallMadeOutlinedIcon>
     case 'design':
       return <DesignServicesOutlinedIcon sx={{ color: color, width: `${size}px`, height: `${size}px` }}></DesignServicesOutlinedIcon>
+    case 'react':
+      return <img src='../public/static/react.svg' width={`${size}px`} height={`${size}px`} />
+    case 'next':
+      return <img src='../public/static/next.svg' width={`${size}px`} height={`${size}px`} />
+    case 'python':
+      return <img src='../public/static/python.svg' width={`${size}px`} height={`${size}px`} />
+
     default:
       return <VideogameAssetOutlinedIcon sx={{ color: color, width: `${size}px`, height: `${size}px` }}></VideogameAssetOutlinedIcon>
 
