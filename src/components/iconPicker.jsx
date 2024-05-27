@@ -5,6 +5,10 @@ import PhotoCameraOutlinedIcon from '@mui/icons-material/PhotoCameraOutlined';
 import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';
 import CallMadeOutlinedIcon from '@mui/icons-material/CallMadeOutlined';
 import DesignServicesOutlinedIcon from '@mui/icons-material/DesignServicesOutlined';
+import reactimg from '../../public/react.svg'
+import nextimg from '../../public/next.svg'
+import pythonimg from '../../public/python.svg'
+
 
 export const IconPicker = ({ icon, color = '#000', size: size = '40px' }) => {
 
@@ -24,11 +28,11 @@ export const IconPicker = ({ icon, color = '#000', size: size = '40px' }) => {
     case 'design':
       return <DesignServicesOutlinedIcon sx={{ color: color, width: `${size}px`, height: `${size}px` }}></DesignServicesOutlinedIcon>
     case 'react':
-      return <img src='../public/static/react.svg' width={`${size}px`} height={`${size}px`} />
+      return <img src={reactimg} width={`${size}px`} height={`${size}px`} />
     case 'next':
-      return <img src='../public/static/next.svg' width={`${size}px`} height={`${size}px`} />
+      return <img src={nextimg} width={`${size}px`} height={`${size}px`} />
     case 'python':
-      return <img src='../public/static/python.svg' width={`${size}px`} height={`${size}px`} />
+      return <img src={pythonimg} width={`${size}px`} height={`${size}px`} />
 
     default:
       return <VideogameAssetOutlinedIcon sx={{ color: color, width: `${size}px`, height: `${size}px` }}></VideogameAssetOutlinedIcon>

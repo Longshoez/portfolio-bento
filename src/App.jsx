@@ -3,7 +3,7 @@ import './App.css'
 import { Block } from './components/block'
 import { BlockComboText } from './components/blockComboText'
 import { IconPicker } from './components/iconPicker'
-
+import me from '../public/me.jpeg'
 //NOTE: Make the SEO perfect for this project
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
           <Grid item xs={6}>
             <Block h={100} type='image' delay={1}>
               <img
-                src='./assets/me.jpeg'
+                src={me}
                 width='100%'
                 height='100%'
                 style={{
