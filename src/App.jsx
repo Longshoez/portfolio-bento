@@ -2,9 +2,8 @@ import { Typography, Grid, Box } from '@mui/material'
 import './App.css'
 import { Block } from './components/block'
 import { BlockComboText } from './components/blockComboText'
-import { IconPicker } from './components/iconPicker'
+//import { IconPicker } from './components/iconPicker'
 import me from '../public/me.jpeg'
-//NOTE: Make the SEO perfect for this project
 
 function App() {
 
@@ -193,6 +192,7 @@ function App() {
                 iconSize={40}
                 color='white'
                 body='More about me'
+              // navigate=''
               />
             </Block>
             {/* <Block type={'button'}>More about me</Block> */}

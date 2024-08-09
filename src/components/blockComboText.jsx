@@ -56,7 +56,7 @@ export const BlockComboText = ({
       }
       {
         body && <Typography
-          sx={{ height: '100%' }}
+          sx={{ height: '100%'}}
           variant={type === 'title' ? 'h4' : 'p'}
           fontSize={'22px'}
           lineHeight='23px'
