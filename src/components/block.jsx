@@ -48,13 +48,11 @@ export const Block = ({
     backgroundColor: `${blockType(type)}`,
     alignContent: `${align}`,
     //3d buttons - based on ig's Note bubbles
-    boxShadow: '-2px -2px 1px rgba(250, 250, 250, 0.80), inset 10px 15px 25px rgba(250, 250, 250, 0.45), inset -2px -5px 10px rgba(0, 0, 0, 0.25)',
+    // boxShadow: '-2px -2px 1px rgba(250, 250, 250, 0.80), inset 10px 15px 25px rgba(250, 250, 250, 0.45), inset -2px -5px 10px rgba(0, 0, 0, 0.25)',
+    //WARNING: effect might break on light theme
+    boxShadow: '-1px -1px 2px rgba(250, 250, 250, 0.5),  2px 2px 4px rgba(200,200,200, 0.2)',
     //skeumorphic colors, only works in light theme, until i can find a way to use the light-theme variable i wont be able to propertly switch this into its right colors
-    //-1.5px -1.5px 1px rgba(250, 250, 250, 0.40)
-    //inset 10px 15px 25px rgba(250, 250, 250, 0.45)
-    //inset -2px -5px 10px rgba(0, 0, 0, 0.25)
-    //8px 8px 10px rgb(0,0,0,0.1)
-    //-7px -7px 10px rgb(255,255,255,0.45)'
+    // boxShadow: '-1.5px -1.5px 1px rgba(250, 250, 250, 0.40) inset 10px 15px 25px rgba(250, 250, 250, 0.45) inset -2px -5px 10px rgba(0, 0, 0, 0.25) 8px 8px 10px rgb(0,0,0,0.1) -7px -7px 10px rgb(255,255,255,0.45)',
     opacity: disabled ? 0.15 : 1,
   }
 
